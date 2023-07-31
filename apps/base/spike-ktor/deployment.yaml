@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spike-ktor
+  namespace: spike-ktor
+spec:
+  selector:
+    matchLabels:
+      app: spike-ktor
+  template:
+    metadata:
+      labels:
+        app: spike-ktor
+    spec:
+      containers:
+      - name: spike-ktor
+        image: ilkimo/spike-ktor
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
+        ports:
+        - containerPort: 8080
