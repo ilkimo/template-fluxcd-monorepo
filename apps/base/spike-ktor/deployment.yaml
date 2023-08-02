@@ -5,6 +5,7 @@ metadata:
   name: spike-ktor
   namespace: spike-ktor
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: spike-ktor
@@ -15,7 +16,7 @@ spec:
     spec:
       containers:
       - name: spike-ktor
-        image: ilkimo/spike-ktor
+        image: ilkimo/spike-ktor:latest
         resources:
           limits:
             memory: "128Mi"
