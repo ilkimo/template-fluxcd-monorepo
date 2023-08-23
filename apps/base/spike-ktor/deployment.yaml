@@ -13,10 +13,18 @@ spec:
     metadata:
       labels:
         app: spike-ktor
+      annotations:
+        fluxcd.io/automated: "true"
+        fluxcd.io/tag.spike-ktor: semver:v*
     spec:
       containers:
       - name: spike-ktor
-        image: ilkimo/spike-ktor:v0.2.0
+        image: ilkimo/spike-ktor # {"$imagepolicy": "spike-ktor:spike-ktor"}
+        env:
+        - name: imageUpgrades
+          valueFrom:
+            fieldRef:
+              fieldPath: 'metadata.annotations["image.toolkit.fluxcd.io/automation"]'
         resources:
           limits:
             memory: "128Mi"

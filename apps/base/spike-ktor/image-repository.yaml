@@ -1,0 +1,12 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1alpha2
+kind: ImageRepository
+metadata:
+  name: spike-ktor-image-repository
+  namespace: spike-ktor
+spec:
+  interval: 5m0s
+  image: ilkimo/spike-ktor
+#  secretRef:
+#    name: dockerhub-credentials
+
