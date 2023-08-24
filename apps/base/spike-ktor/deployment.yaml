@@ -4,6 +4,8 @@ kind: Deployment
 metadata:
   name: spike-ktor
   namespace: spike-ktor
+  annotations:
+    image.toolkit.fluxcd.io/automation: "glob:v*"
 spec:
   replicas: 1
   selector:
@@ -13,18 +15,10 @@ spec:
     metadata:
       labels:
         app: spike-ktor
-      annotations:
-        fluxcd.io/automated: "true"
-        fluxcd.io/tag.spike-ktor: semver:v*
     spec:
       containers:
       - name: spike-ktor
-        image: ilkimo/spike-ktor # {"$imagepolicy": "spike-ktor:spike-ktor"}
-        env:
-        - name: imageUpgrades
-          valueFrom:
-            fieldRef:
-              fieldPath: 'metadata.annotations["image.toolkit.fluxcd.io/automation"]'
+        image: ilkimo/spike-ktor # this will be automatically updated by Flux v2 when a new image is pushed based on the image policy
         resources:
           limits:
             memory: "128Mi"

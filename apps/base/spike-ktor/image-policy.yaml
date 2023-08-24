@@ -9,5 +9,5 @@ spec:
     name: spike-ktor-image-repository
   policy:
     semver:
-      range: ">=v0.2.0"
+      range: ">=v0.2.0 <v1.0.0"
 
