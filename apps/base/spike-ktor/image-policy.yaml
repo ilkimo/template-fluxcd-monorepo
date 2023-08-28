@@ -3,7 +3,7 @@ apiVersion: image.toolkit.fluxcd.io/v1alpha2
 kind: ImagePolicy
 metadata:
   name: spike-ktor
-  namespace: spike-ktor
+  namespace: flux-system
 spec:
   imageRepositoryRef:
     name: spike-ktor-image-repository

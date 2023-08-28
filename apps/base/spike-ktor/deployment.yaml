@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: spike-ktor
-  namespace: spike-ktor
+  namespace: flux-system
   annotations:
     image.toolkit.fluxcd.io/automation: "glob:v*"
 spec:
