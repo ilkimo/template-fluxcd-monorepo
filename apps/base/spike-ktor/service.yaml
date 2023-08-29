@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: spike-ktor-service
-  namespace: flux-system
+  namespace: spike-ktor
 spec:
   selector:
     app: spike-ktor
