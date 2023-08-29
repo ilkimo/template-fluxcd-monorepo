@@ -6,7 +6,7 @@ metadata:
   namespace: spike-ktor
 spec:
   imageRepositoryRef:
-    name: spike-ktor-image-repository
+    name: spike-ktor
   policy:
     semver:
       range: ">=v0.2.0 <v1.0.0"
