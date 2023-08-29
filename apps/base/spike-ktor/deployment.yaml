@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: spike-ktor
-        image: ilkimo/spike-ktor # this will be automatically updated by Flux v2 when a new image is pushed based on the image policy
+        image: ilkimo/spike-ktor:v0.2.0 # this will be automatically updated by Flux v2 when a new image is pushed based on the image policy
         resources:
           limits:
             memory: "128Mi"
