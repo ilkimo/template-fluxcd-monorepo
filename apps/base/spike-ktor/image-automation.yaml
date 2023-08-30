@@ -22,5 +22,5 @@ spec:
     name: flux-system
     namespace: flux-system
   update:
-    path: ./clusters/staging
+    path: ./apps/base/spike-ktor
     strategy: Setters
