@@ -19,7 +19,7 @@ spec:
       - name: spike-ktor
         # this will be automatically updated by Flux v2 when a new image is pushed based on the image polic
         # the comment is like {"$imagepolicy": "namespace:imagepolicy-name"}
-        image: ilkimo/spike-ktor:v0.2.2 # {"$imagepolicy": "spike-ktor:spike-ktor"}
+        image: ilkimo/spike-ktor:v0.2.3 # {"$imagepolicy": "spike-ktor:spike-ktor"}
         resources:
           limits:
             memory: "128Mi"
