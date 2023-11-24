@@ -1,0 +1,11 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: prove-semantic-release
+  namespace: prove-semantic-release
+spec:
+  interval: 1m0s # TODO increase time
+  image: gitlab.di.unito.it:5000/firstlife/oci/prove-semantic-release
+  secretRef:
+    name: prove-semantic-release-secret

@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: prove-semantic-release
+resources:
+  - namespace.yaml
+  - image-automation.yaml
+  - image-policy.yaml
+  - image-repository.yaml
+  - prove-semantic-release-dpl.yaml
+  # - prove-semantic-release-ing.yaml
+  - prove-semantic-release-secret.yaml
+  - prove-semantic-release-svc.yaml

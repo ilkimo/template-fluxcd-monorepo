@@ -1,0 +1,376 @@
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: backend-lb4-ingress-prod
+#   namespace: backend
+#   annotations:
+#     cert-manager.io/cluster-issuer: letsencrypt-prod
+#     nginx.ingress.kubernetes.io/enable-cors: "true"
+#     nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.firstlife.org/*"
+#     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+#     nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"
+# spec:
+#   ingressClassName: nginx
+#   tls:
+#     - hosts:
+#         - api.prod.firstlife.org
+#       secretName: api-prod-firstlife-org-secret
+#   rules:
+#     - host: api.prod.firstlife.org
+#       http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: backend-lb4-service
+#                 port:
+#                   name: http
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: backend-lb4-ingress-unioneindustriale
+#   namespace: backend
+#   annotations:
+#     cert-manager.io/cluster-issuer: letsencrypt-prod
+#     nginx.ingress.kubernetes.io/enable-cors: "true"
+#     nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.firstlife.org/*"
+#     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+#     nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"
+# spec:
+#   ingressClassName: nginx
+#   tls:
+#     - hosts:
+#         - api.unioneindustriale.firstlife.org
+#       secretName: api-unioneindustriale-firstlife-org-secret
+#   rules:
+#     - host: api.unioneindustriale.firstlife.org
+#       http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: backend-lb4-service
+#                 port:
+#                   name: http
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: backend-lb4-ingress-edu
+#   namespace: backend
+#   annotations:
+#     cert-manager.io/cluster-issuer: letsencrypt-prod
+#     nginx.ingress.kubernetes.io/enable-cors: "true"
+#     nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.firstlife.org/*"
+#     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+#     nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"
+# spec:
+#   ingressClassName: nginx
+#   tls:
+#     - hosts:
+#         - api.edu.firstlife.org
+#       secretName: api-edu-firstlife-org-secret
+#   rules:
+#     - host: api.edu.firstlife.org
+#       http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: backend-lb4-service
+#                 port:
+#                   name: http
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: backend-lb4-ingress-civic
+#   namespace: backend
+#   annotations:
+#     cert-manager.io/cluster-issuer: letsencrypt-prod
+#     nginx.ingress.kubernetes.io/enable-cors: "true"
+#     nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.firstlife.org/*"
+#     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+#     nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"
+# spec:
+#   ingressClassName: nginx
+#   tls:
+#     - hosts:
+#         - api.civic.firstlife.org
+#       secretName: api-civic-firstlife-org-secret
+#   rules:
+#     - host: api.civic.firstlife.org
+#       http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: backend-lb4-service
+#                 port:
+#                   name: http
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: backend-lb4-ingress-4future
+#   namespace: backend
+#   annotations:
+#     cert-manager.io/cluster-issuer: letsencrypt-prod
+#     nginx.ingress.kubernetes.io/enable-cors: "true"
+#     nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.firstlife.org/*"
+#     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+#     nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"
+# spec:
+#   ingressClassName: nginx
+#   tls:
+#     - hosts:
+#         - api.4future.firstlife.org
+#       secretName: api-4future-firstlife-org-secret
+#   rules:
+#     - host: api.4future.firstlife.org
+#       http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: backend-lb4-service
+#                 port:
+#                   name: http
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: backend-lb4-ingress-museidiclasse
+#   namespace: backend
+#   annotations:
+#     cert-manager.io/cluster-issuer: letsencrypt-prod
+#     nginx.ingress.kubernetes.io/enable-cors: "true"
+#     nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.firstlife.org/*"
+#     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+#     nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"
+# spec:
+#   ingressClassName: nginx
+#   tls:
+#     - hosts:
+#         - api.museidiclasse.firstlife.org
+#       secretName: api-museidiclasse-firstlife-org-secret
+#   rules:
+#     - host: api.museidiclasse.firstlife.org
+#       http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: backend-lb4-service
+#                 port:
+#                   name: http
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: backend-lb4-ingress-commonshood
+#   namespace: backend
+#   annotations:
+#     cert-manager.io/cluster-issuer: letsencrypt-prod
+#     nginx.ingress.kubernetes.io/enable-cors: "true"
+#     nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.firstlife.org/*"
+#     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+#     nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"
+# spec:
+#   ingressClassName: nginx
+#   tls:
+#     - hosts:
+#         - api.commonshood.firstlife.org
+#       secretName: api-commonshood-firstlife-org-secret
+#   rules:
+#     - host: api.commonshood.firstlife.org
+#       http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: backend-lb4-service
+#                 port:
+#                   name: http
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: backend-lb4-ingress-learningformkaisariani
+#   namespace: backend
+#   annotations:
+#     cert-manager.io/cluster-issuer: letsencrypt-prod
+#     nginx.ingress.kubernetes.io/enable-cors: "true"
+#     nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.firstlife.org/*"
+#     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+#     nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"
+# spec:
+#   ingressClassName: nginx
+#   tls:
+#     - hosts:
+#         - api.learningformkaisariani.firstlife.org
+#       secretName: api-learningformkaisariani-firstlife-org-secret
+#   rules:
+#     - host: api.learningformkaisariani.firstlife.org
+#       http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: backend-lb4-service
+#                 port:
+#                   name: http
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: backend-lb4-ingress-urbanisticadigenere
+#   namespace: backend
+#   annotations:
+#     cert-manager.io/cluster-issuer: letsencrypt-prod
+#     nginx.ingress.kubernetes.io/enable-cors: "true"
+#     nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.firstlife.org/*"
+#     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+#     nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"
+# spec:
+#   ingressClassName: nginx
+#   tls:
+#     - hosts:
+#         - api.urbanisticadigenere.firstlife.org
+#       secretName: api-urbanisticadigenere-firstlife-org-secret
+#   rules:
+#     - host: api.urbanisticadigenere.firstlife.org
+#       http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: backend-lb4-service
+#                 port:
+#                   name: http
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: backend-lb4-ingress-nlab
+#   namespace: backend
+#   annotations:
+#     cert-manager.io/cluster-issuer: letsencrypt-prod
+#     nginx.ingress.kubernetes.io/enable-cors: "true"
+#     nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.firstlife.org/*"
+#     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+#     nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"
+# spec:
+#   ingressClassName: nginx
+#   tls:
+#     - hosts:
+#         - api.nlab.firstlife.org
+#       secretName: api-nlab-firstlife-org-secret
+#   rules:
+#     - host: api.nlab.firstlife.org
+#       http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: backend-lb4-service
+#                 port:
+#                   name: http
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: backend-lb4-ingress-unitoafrica
+#   namespace: backend
+#   annotations:
+#     cert-manager.io/cluster-issuer: letsencrypt-prod
+#     nginx.ingress.kubernetes.io/enable-cors: "true"
+#     nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.firstlife.org/*"
+#     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+#     nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"
+# spec:
+#   ingressClassName: nginx
+#   tls:
+#     - hosts:
+#         - api.unitoafrica.firstlife.org
+#       secretName: api-unitoafrica-firstlife-org-secret
+#   rules:
+#     - host: api.unitoafrica.firstlife.org
+#       http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: backend-lb4-service
+#                 port:
+#                   name: http
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: backend-lb4-ingress-geco
+#   namespace: backend
+#   annotations:
+#     cert-manager.io/cluster-issuer: letsencrypt-prod
+#     nginx.ingress.kubernetes.io/enable-cors: "true"
+#     nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.firstlife.org/*"
+#     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+#     nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"
+# spec:
+#   ingressClassName: nginx
+#   tls:
+#     - hosts:
+#         - api.geco.firstlife.org
+#       secretName: api-geco-firstlife-org-secret
+#   rules:
+#     - host: api.geco.firstlife.org
+#       http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: backend-lb4-service
+#                 port:
+#                   name: http
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: backend-lb4-ingress-famigliets
+#   namespace: backend
+#   annotations:
+#     cert-manager.io/cluster-issuer: letsencrypt-prod
+#     nginx.ingress.kubernetes.io/enable-cors: "true"
+#     nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.firstlife.org/*"
+#     nginx.ingress.kubernetes.io/cors-allow-methods: "GET, PUT, POST, DELETE, PATCH, OPTIONS"
+#     nginx.ingress.kubernetes.io/cors-allow-headers: "DNT,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization"
+# spec:
+#   ingressClassName: nginx
+#   tls:
+#     - hosts:
+#         - api.famigliets.firstlife.org
+#       secretName: api-famigliets-firstlife-org-secret
+#   rules:
+#     - host: api.famigliets.firstlife.org
+#       http:
+#         paths:
+#           - path: /
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name: backend-lb4-service
+#                 port:
+#                   name: http

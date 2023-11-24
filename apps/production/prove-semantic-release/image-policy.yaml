@@ -1,0 +1,18 @@
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: prove-semantic-release
+  namespace: prove-semantic-release
+spec:
+  imageRepositoryRef:
+    name: prove-semantic-release
+  filterTags:
+    pattern: 'v(?P<version>[0-9]+\.[0-9]+\.[0-9]+)-main'
+    extract: '$version'
+  policy:
+    numerical:
+      order: desc
+    semver:
+      range: ">=1.0.0 <2.0.0"
+
